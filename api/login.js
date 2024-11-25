@@ -1,4 +1,4 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
+// import { VercelRequest, VercelResponse } from '@vercel/node';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
@@ -7,8 +7,8 @@ const HASHED_PASSWORD = process.env.HASHED_PASSWORD;
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
 
 export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse
+  req,
+  res
 ) {
   // Vérifier si c'est une requête POST
   if (req.method !== 'POST') {
