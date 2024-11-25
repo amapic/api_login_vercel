@@ -44,7 +44,7 @@ import jwt from 'jsonwebtoken';
 const HASHED_PASSWORD = process.env.HASHED_PASSWORD;
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
 
-export default async function handler(
+export async function handler(
   req: VercelRequest,
   res: VercelResponse
 ) {
